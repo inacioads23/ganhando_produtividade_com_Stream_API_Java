@@ -23,7 +23,7 @@ public class ConsumerExample1 {
 
 		// Opção2
 		System.out.println("\nOpção2\n[numeros.forEach(n -> {\n    if (n % 2 == 0) {\n    System.out.println(n);\n    }\n});]");
-		numeros.forEach(n -> {
+		numeros.forEach(n -> { // apenas Lambda
 			if (n % 2 == 0) {
 				System.out.println(n);
 			}
@@ -31,7 +31,7 @@ public class ConsumerExample1 {
 
 		// Opção3
 		System.out.println("\nOpção3\n[numeros.stream()\n    .filter(n -> n % 2 == 0)\n    .forEach(System.out::println);]");
-		numeros.stream().filter(n -> n % 2 == 0).forEach(System.out::println);
+		numeros.stream().filter(n -> n % 2 == 0).forEach(System.out::println); // Lambda e Method Reference
 	}
 
 }
