@@ -1,5 +1,8 @@
 package functional_interface.examples;
 
+// Supplier<T>: Representa uma operação que não aceita nenhum argumento e retorna um resultado do tipo T.
+// É comumente usada para criar ou fornecer novos objetos de um determinado tipo.
+
 import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
