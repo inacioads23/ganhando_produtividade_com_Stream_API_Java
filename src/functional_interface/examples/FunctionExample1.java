@@ -18,14 +18,25 @@ public class FunctionExample1 {
 		Function<Integer, Integer> dobrar = numero -> numero * 2;
 		
 		// Usar a função para dobrar todos os números no Stream e armazená-los em outra lista
-		List<Integer> numerosDobrados = numeros.stream().map(dobrar).collect(Collectors.toList());
+		List<Integer> numerosDobrados = numeros.stream()
+				.map(dobrar)
+				.collect(Collectors.toList());
+		List<Integer> numerosDobrados1 = numeros.stream()
+				.map(dobrar)
+				.toList();
+		List<Integer> numerosDobrados2 = numeros.stream()
+				.map(n -> n * 2)
+				.toList();
 		
 		// Imprimir a lista de números dobrados
 		System.out.println("Opção1 - Usando Method Reference");
 		numerosDobrados.forEach(System.out::println);
 		
 		System.out.println("\nOpção2 - Usando Lambda");
-		numerosDobrados.forEach(n -> System.out.println(n));
+		numerosDobrados1.forEach(n -> System.out.println(n));
+		
+		System.out.println("\nOpção3 - Usando Lambda");
+		numerosDobrados2.forEach(n -> System.out.println(n));
 	}
 
 }
