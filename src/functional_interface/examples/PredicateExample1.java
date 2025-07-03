@@ -3,7 +3,6 @@ package functional_interface.examples;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 // Predicate<T>: Representa 'uma função' que aceita um 'argumento do tipo T' e 'retorna um valor booleano' (verdadeiro ou falso).
 // É comumente usada para 'filtrar' os elementos do Stream 'com base em alguma condição'.
