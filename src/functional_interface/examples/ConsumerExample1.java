@@ -21,11 +21,11 @@ public class ConsumerExample1 {
 
 		// Usar o Consumer para imprimir números pares no Stream
 		// Opção1
-		System.out.println("Opção1\n[numeros.stream().forEach(imprimirNumeroPar);]");
+		System.out.println("Opção1");
 		numeros.stream().forEach(imprimirNumeroPar);
 
 		// Opção2
-		System.out.println("\nOpção2\n[numeros.forEach(n -> {\n    if (n % 2 == 0) {\n    System.out.println(n);\n    }\n});]");
+		System.out.println("\nOpção2");
 		numeros.forEach(n -> { // apenas Lambda
 			if (n % 2 == 0) {
 				System.out.println(n);
@@ -33,8 +33,9 @@ public class ConsumerExample1 {
 		});
 
 		// Opção3
-		System.out.println("\nOpção3\n[numeros.stream()\n    .filter(n -> n % 2 == 0)\n    .forEach(System.out::println);]");
-		numeros.stream().filter(n -> n % 2 == 0).forEach(System.out::println); // Lambda e Method Reference
+		System.out.println("\nOpção3");
+		numeros.stream()
+			.filter(n -> n % 2 == 0)
+			.forEach(System.out::println); // Imprime com Method Reference
 	}
-
 }
